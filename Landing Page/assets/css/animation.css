@@ -1,0 +1,89 @@
+/* Animation definitions */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+/* Apply animations */
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.flip {
+    animation: flip 1s infinite;
+    transform-origin: center;
+}
+
+.shake {
+    animation: shake 0.5s infinite;
+}
+
+/* Utility class */
+i.fa {
+    margin-right: 10px;
+}
+
+/* Animation for locale span */
+@keyframes colorChange {
+    0% {
+        color: #e25e3b;
+    }
+    25% {
+        color: yellow;
+    }
+    25% {
+        color: #ffa07a;
+    }
+    25% {
+        color: #4caf50;
+    }
+    25% {
+        color: #800080;
+    }
+    25% {
+        color: #800000;
+    }
+    25% {
+        color: #66cdaa;
+    }
+    25% {
+        color: #00bfff;
+    }
+}
+
+.locale {
+    animation: colorChange 4s infinite;
+}
